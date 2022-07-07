@@ -1,4 +1,5 @@
 const key = require("./secret/key.json")
+const id_csgo_role = require("./secret/id.json")
 
 const Discord = require("discord.js")
 const client = new Discord.Client({
@@ -14,7 +15,7 @@ client.on("ready", () => {
 
 client.on("messageCreate", (message) => {
     if(message.content == "/search") {
-        message.reply(`<@${message.author.id}> cherche un joueur <@&${994042052994138182}> !`)
+        message.reply(`<@${message.author.id}> cherche un joueur <@&994042052994138182> !`)
     }
     if(message.content == "c'est bien tu es obéissant") {
         message.reply("c'est un honneur maître")
