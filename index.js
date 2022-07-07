@@ -14,7 +14,7 @@ client.on("ready", () => {
 
 client.on("messageCreate", (message) => {
     if(message.content == "/search") {
-        message.reply(`<@${client.user.id}> cette personne un joueur!`)
+        message.reply(`<@${message.author.id}> cherche un joueur <@&${994042052994138182}> !`)
     }
     if(message.content == "c'est bien tu es obéissant") {
         message.reply("c'est un honneur maître")
