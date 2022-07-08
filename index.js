@@ -2,6 +2,7 @@ const roleidcsgo = require("./secret/roleidcsgo.json")
 const roleidminecraft = require("./secret/roleidminecraft.json")
 const roleidlol = require("./secret/roleidlol.json")
 const roleidtft = require("./secret/roleidtft.json")
+const roleidgenshinimpact = require("./secret/roleidgenshinimpact.json")
 const key = require("./secret/key.json")
 
 const Discord = require("discord.js")
@@ -25,6 +26,8 @@ client.on("messageCreate", (message) => {
     const randomMessagelol = giflol[Math.floor(Math.random() * giflol.length)];
     const giftft = ["https://tenor.com/view/come-at-me-pengu-teamfight-tactics-come-here-lets-go-gif-23653591","https://tenor.com/view/enraged-chibi-vi-teamfight-tactics-angry-mad-gif-23809119","https://tenor.com/view/wink-jinx-choncc-teamfight-tactics-signaling-gif-23653584","https://tenor.com/view/lets-build-pengu-teamfight-tactics-time-to-build-time-to-fix-gif-23653603","https://tenor.com/view/pengu-league-of-legends-eat-eating-tft-gif-21350491","https://tenor.com/view/building-pengu-ekko-teamfight-tactics-crafting-gif-23653607","https://tenor.com/view/throwing-a-tantrum-choncc-teamfight-tactics-throwing-a-fit-upset-gif-23653605","https://tenor.com/view/singing-gloop-teamfight-tactics-lets-dance-move-your-body-gif-23809124","https://tenor.com/view/lol-tft-league-of-legends-teamfight-tactics-pengu-gif-21350760","https://tenor.com/view/tft-penguin-omg-team-fight-tactics-white-eyes-gif-21337754"]
     const randomMessagetft = giftft[Math.floor(Math.random() * giftft.length)];
+    const gifgenshinimpact = ["https://tenor.com/view/ayato-genshin-gif-25123727","https://tenor.com/view/traveler-im-leaving-genshin-impact-genshin-genshin-traveler-aether-genshin-gif-24649713","https://tenor.com/view/genshin-genshin-impact-genshin-dance-timmie-genshin-meme-gif-24509189","https://tenor.com/view/kaeya-abyss-mage-dance-gif-24825826","https://tenor.com/view/low-tier-god-ltg-you-should-sleep-you-should-raiden-gif-25370590","https://tenor.com/view/xiao-genshin-impact-adeptus-xiao-xiao-genshin-genshin-xiao-gif-23279231","https://tenor.com/view/sus-diona-genshin-impact-genshin-sussy-gif-23755170","https://tenor.com/view/hyejinsgenre-diluc-genshin-impact-diluc-genshin-impact-genshin-meme-gif-24713004","https://tenor.com/view/mihoyo-genshin-impact-genshinimpact-jean-hot-chick-babe-hawt-pretty-beautiful-waifu-wifey-gif-24330650","https://tenor.com/view/sayu-genshin-impact-sayu-genshin-impact-gif-23574593","https://tenor.com/view/paimon-genshin-impact-confused-math-meme-gif-21405778","https://tenor.com/view/klee-klee-dancing-yasuchan-yasu-ino-sl-gif-24406102","https://tenor.com/view/genshin-impact-sayu-clapping-gif-23423505","https://tenor.com/view/qiqi-jiangshi-adeptus-genshin-impact-genshin-gif-25268881"]
+    const randomMessagegenshinimpact = gifgenshinimpact[Math.floor(Math.random() * gifgenshinimpact.length)];
     if(message.content == "/rcsgo") {
         message.reply(`<@${message.author.id}> cherche un joueur <@&${roleidcsgo.id_csgo_role}> ! ${randomMessageCsgo}`) 
     }
@@ -34,9 +37,12 @@ client.on("messageCreate", (message) => {
     if(message.content == "/rlol") {
         message.reply(`<@${message.author.id}> cherche un joueur <@&${roleidlol.id_lol_role}> ! ${randomMessagelol} `) 
     }
+    if(message.content == "/rgenshin") {
+        message.reply(`<@${message.author.id}> cherche un joueur <@&${roleidgenshinimpact.id_genshin_impact_role}> ! ${randomMessagegenshinimpact} `) 
+    }
     if(message.content == "/rtft") {
         message.reply(`<@${message.author.id}> cherche un joueur <@&${roleidtft.id_tft_role}> ! ${randomMessagetft} `) 
-    }
+    }    
 })
 
 
